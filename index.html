@@ -25,7 +25,6 @@
               <center>
                 <img id="btn" width="100px" src="img/red.png"/>
                 <br>
-                <iframe id="frame" src="" width="100%" height="1"></iframe>
                 <p>Push the red button above to be taken to a random FurAffinity.net submission.</p>
               </center>
             </div> <!-- #main -->
@@ -38,8 +37,8 @@
         <script type="text/javascript">
            $(document).ready(function() {
              $("#btn").click(function(){
-                 $("#frame").attr("height", '700');
-                 $("#frame").attr("src", 'http://www.furaffinity.net/view/' + Math.floor((Math.random() * 21029654) + 1));
+                 var wn = window.open('http://www.furaffinity.net/view/' + Math.floor((Math.random() * 21029654) + 1), '_blank');
+                 wn.focus()
              });
            });
         </script>
